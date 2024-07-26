@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header-allow {
+  position: relative;
+  width: 100%;
+  background-color: #091242;
+  height: 160px;
+  display: flex;
+}
+.header-allow .container-header {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  align-self: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.header-allow .caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-allow .caption h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.header-allow .icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  float: left;
+}
+.header-allow .icon .first, .header-allow .icon .second {
+  width: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.header-allow .icon .first div, .header-allow .icon .second div {
+  background-color: #FFB82B;
+  width: 10px;
+  height: 10px;
+}
+.header-allow .icon .first-child {
+  transform: rotate(-30deg);
+}
+.header-allow .information {
+  position: relative;
+  width: 745px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 39px;
+}
+.header-allow .information .string {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.header-allow .information .string p {
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */

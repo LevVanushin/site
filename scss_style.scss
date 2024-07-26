@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+$rubik: "Rubik", sans-serif;
+$krub: "Krub", sans-serif;
+
+.header-allow{
+    position: relative;
+    width: 100%;
+    background-color: #091242;
+    height: 160px;
+    display: flex;
+
+    .container-header{
+
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        align-self: center;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .caption{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h1{  
+            font: {
+                family: $rubik;
+                size: 30px;
+                weight: 600;
+            }
+        }
+    }
+    .icon{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        float: left;
+        .first, .second{
+            width: 24px;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            
+            div{
+                background-color: #FFB82B;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        .first-child{
+            transform: rotate(-30deg);
+        }
+    }
+    .information{
+        position: relative;
+        width: 745px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 39px;
+        .string{
+            display: flex;
+            align-items: center;
+            gap: 17px;
+
+            p{
+
+                font: {
+                    family: $krub;
+                    weight: 500;
+                    size: 14px;
+                }
+            }
+        }
+    }
+
+
+}
