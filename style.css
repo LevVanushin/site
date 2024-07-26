@@ -1,72 +1,115 @@
 * {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 .header-allow {
   position: relative;
   width: 100%;
   background-color: #091242;
   height: 160px;
-  display: flex;
-}
-.header-allow .container-header {
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-  align-self: center;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-.header-allow .caption {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.header-allow .caption h1 {
-  font-family: "Rubik", sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-}
-.header-allow .icon {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  float: left;
-}
-.header-allow .icon .first, .header-allow .icon .second {
-  width: 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-}
-.header-allow .icon .first div, .header-allow .icon .second div {
-  background-color: #FFB82B;
-  width: 10px;
-  height: 10px;
-}
-.header-allow .icon .first-child {
-  transform: rotate(-30deg);
-}
-.header-allow .information {
-  position: relative;
-  width: 745px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 39px;
-}
-.header-allow .information .string {
-  display: flex;
-  align-items: center;
-  gap: 17px;
-}
-.header-allow .information .string p {
-  font-family: "Krub", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-}
+  display: flex; }
+  .header-allow .container-header {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    align-self: center;
+    color: white;
+    display: flex;
+    justify-content: space-between; }
+  .header-allow .caption {
+    display: flex;
+    align-items: center;
+    gap: 10px; }
+    .header-allow .caption h1 {
+      font-family: "Rubik", sans-serif;
+      font-size: 30px;
+      font-weight: 600; }
+  .header-allow .icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    float: left; }
+    .header-allow .icon .first, .header-allow .icon .second {
+      width: 24px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px; }
+      .header-allow .icon .first div, .header-allow .icon .second div {
+        background-color: #FFB82B;
+        width: 10px;
+        height: 10px; }
+    .header-allow .icon .first-child {
+      transform: rotate(-30deg); }
+  .header-allow .information {
+    position: relative;
+    width: 745px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 39px; }
+    .header-allow .information .string {
+      display: flex;
+      align-items: center;
+      gap: 17px; }
+      .header-allow .information .string p {
+        font-family: "Krub", sans-serif;
+        font-weight: 500;
+        font-size: 14px; }
+
+main {
+  width: 100%;
+  height: 875px;
+  background-image: url(./images/bg/bg-main.png); }
+  main .header-below {
+    position: relative;
+    width: 100%;
+    height: 78px;
+    background-color: rgba(9, 18, 66, 0.25); }
+    main .header-below .container {
+      position: relative;
+      width: 1198px;
+      height: 100%;
+      margin: auto;
+      justify-content: space-between;
+      display: flex; }
+      main .header-below .container .first {
+        align-self: center;
+        display: flex;
+        list-style-type: none;
+        height: 22px;
+        gap: 30px; }
+        main .header-below .container .first a {
+          text-decoration: none;
+          color: white;
+          font-family: "Krub", sans-serif;
+          font-weight: 600;
+          font-size: 16px; }
+        main .header-below .container .first li:not(.without-border) {
+          padding-left: 30px;
+          border-left: 1px rgba(255, 255, 255, 0.2) solid; }
+      main .header-below .container li:hover {
+        text-decoration: underline;
+        text-decoration-color: white;
+        text-underline-offset: 33px;
+        text-decoration-thickness: 2px; }
+      main .header-below .container .right-part {
+        display: flex;
+        gap: 50px;
+        align-items: center; }
+        main .header-below .container .right-part ol {
+          display: flex;
+          list-style-type: none;
+          gap: 24px; }
+        main .header-below .container .right-part button {
+          background-color: white;
+          text-align: center;
+          border: none;
+          color: black;
+          width: 216px;
+          height: 100%;
+          font-family: "Krub", sans-serif;
+          font-weight: 600;
+          font-size: 16px; }
 
 /*# sourceMappingURL=style.css.map */

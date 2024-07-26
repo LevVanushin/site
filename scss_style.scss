@@ -81,6 +81,90 @@ $krub: "Krub", sans-serif;
             }
         }
     }
+    
 
+}
 
+main{
+    width: 100%;
+    height: 875px;
+
+    background-image: url(./images/bg/bg-main.png);
+
+    .header-below{
+        @mixin list{
+            align-self: center;
+            display: flex;
+            list-style-type: none;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font: {
+                    family: $krub;
+                    weight: 600;
+                    size: 16px;
+                }
+            }
+        }
+
+        position: relative;
+        width: 100%;
+        height: 78px;
+        background-color: rgba(9, 18, 66, 25%);
+        .container{
+            position: relative;
+            width: 1198px;
+            height: 100%;
+            margin: auto;
+            justify-content: space-between;
+            
+            display: flex;
+
+            // Elements
+
+            .first{
+                @include list();
+                height: 22px;
+                gap: 30px;
+                
+                li:not(.without-border){
+                    padding-left: 30px;
+                    border-left: 1px rgba(255, 255, 255, 20%) solid;
+                }
+                
+            }
+            li:hover{
+                    text-decoration: underline;
+                    text-decoration-color: white;
+                    text-underline-offset: 33px;
+                    text-decoration-thickness: 2px;
+            }
+
+            .right-part{
+                display: flex;
+                gap: 50px;
+                align-items: center;
+                ol{
+                    display: flex;
+                    list-style-type: none;
+                    gap: 24px;
+                }
+                
+                button{
+                    background-color: white;
+                    text-align: center;
+                    border: none;
+                    color: black;
+                    width: 216px;
+                    height: 100%;
+                    font: {
+                        family: $krub;
+                        weight: 600;
+                        size: 16px;
+                    };
+                }
+            }
+        }
+    }
 }
