@@ -1,149 +1,183 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 .header-allow {
   position: relative;
   width: 100%;
   background-color: #091242;
   height: 160px;
-  display: flex; }
-  .header-allow .container-header {
-    position: relative;
-    width: 1200px;
-    margin: 0 auto;
-    align-self: center;
-    color: white;
-    display: flex;
-    justify-content: space-between; }
-  .header-allow .caption {
-    display: flex;
-    align-items: center;
-    gap: 10px; }
-    .header-allow .caption h1 {
-      font-family: "Rubik", sans-serif;
-      font-size: 30px;
-      font-weight: 600; }
-  .header-allow .icon {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    float: left; }
-    .header-allow .icon .first, .header-allow .icon .second {
-      width: 24px;
-      display: flex;
-      flex-direction: row;
-      gap: 4px; }
-      .header-allow .icon .first div, .header-allow .icon .second div {
-        background-color: #FFB82B;
-        width: 10px;
-        height: 10px; }
-    .header-allow .icon .first-child {
-      transform: rotate(-30deg); }
-  .header-allow .information {
-    position: relative;
-    width: 745px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 39px; }
-    .header-allow .information .string {
-      display: flex;
-      align-items: center;
-      gap: 17px; }
-      .header-allow .information .string p {
-        font-family: "Krub", sans-serif;
-        font-weight: 500;
-        font-size: 14px; }
+  display: flex;
+}
+.header-allow .container-header {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  align-self: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.header-allow .caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-allow .caption h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.header-allow .icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  float: left;
+}
+.header-allow .icon .first, .header-allow .icon .second {
+  width: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.header-allow .icon .first div, .header-allow .icon .second div {
+  background-color: #FFB82B;
+  width: 10px;
+  height: 10px;
+}
+.header-allow .icon .first-child {
+  transform: rotate(-30deg);
+}
+.header-allow .information {
+  position: relative;
+  width: 745px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 39px;
+}
+.header-allow .information .string {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.header-allow .information .string p {
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
 
 main {
   width: 100%;
-  height: 875px; }
-  main .bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1; }
-  main .header-below {
-    position: relative;
-    width: 100%;
-    height: 78px;
-    background-color: rgba(9, 18, 66, 0.25); }
-    main .header-below .container {
-      position: relative;
-      width: 1198px;
-      height: 100%;
-      margin: auto;
-      justify-content: space-between;
-      display: flex; }
-      main .header-below .container .first {
-        align-self: center;
-        display: flex;
-        list-style-type: none;
-        height: 22px;
-        gap: 30px; }
-        main .header-below .container .first a {
-          text-decoration: none;
-          color: white;
-          font-family: "Krub", sans-serif;
-          font-weight: 600;
-          font-size: 16px; }
-        main .header-below .container .first li:not(.without-border) {
-          padding-left: 30px;
-          border-left: 1px rgba(255, 255, 255, 0.2) solid; }
-      main .header-below .container li:hover {
-        text-decoration: underline;
-        text-decoration-color: white;
-        text-underline-offset: 33px;
-        text-decoration-thickness: 2px; }
-      main .header-below .container .right-part {
-        display: flex;
-        gap: 50px;
-        align-items: center; }
-        main .header-below .container .right-part ol {
-          display: flex;
-          list-style-type: none;
-          gap: 24px; }
-        main .header-below .container .right-part button {
-          background-color: white;
-          text-align: center;
-          border: none;
-          color: black;
-          width: 216px;
-          height: 100%;
-          font-family: "Krub", sans-serif;
-          font-weight: 600;
-          font-size: 16px; }
-  main .information {
-    width: 571px;
-    height: 406px;
-    display: flex;
-    flex-direction: column; }
-    main .information .text-top {
-      width: 226px;
-      position: relative;
-      color: white;
-      font-family: "Rubik", sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      background-color: rgba(4, 28, 55, 0.5);
-      padding: 3px 9px 3px 9px;
-      text-align: center;
-      border-left: #FFB82B 4px solid; }
-    main .information .main-text {
-      display: flex;
-      flex-direction: column; }
-    main .information button {
-      position: relative;
-      width: 194px;
-      height: 60px;
-      border: none;
-      color: #23212A;
-      font-family: "Krub", sans-serif;
-      font-weight: 600;
-      font-size: 16px;
-      text-align: center;
-      background: linear-gradient(to right, #FFB629, #FFDA56, #FFD7A6); }
+  height: 875px;
+}
+main .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+main .header-below {
+  position: relative;
+  width: 100%;
+  height: 78px;
+  background-color: rgba(9, 18, 66, 0.25);
+}
+main .header-below .first {
+  align-self: center;
+  display: flex;
+  list-style-type: none;
+  height: 22px;
+  gap: 30px;
+}
+main .header-below .first a {
+  text-decoration: none;
+  color: white;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+main .header-below .first li:not(.without-border) {
+  padding-left: 30px;
+  border-left: 1px rgba(255, 255, 255, 0.2) solid;
+}
+main .header-below li:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 33px;
+  text-decoration-thickness: 2px;
+}
+main .header-below .right-part {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+main .header-below .right-part ol {
+  display: flex;
+  list-style-type: none;
+  gap: 24px;
+}
+main .header-below .right-part button {
+  background-color: white;
+  text-align: center;
+  border: none;
+  color: black;
+  max-width: 216px;
+  height: 78px;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+main .information {
+  width: 571px;
+  height: 406px;
+  display: flex;
+  flex-direction: column;
+}
+main .information .text-top {
+  width: 226px;
+  position: relative;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: rgba(4, 28, 55, 0.5);
+  padding: 3px 9px 3px 9px;
+  text-align: center;
+  border-left: #FFB82B 4px solid;
+}
+main .information .main-text {
+  display: flex;
+  flex-direction: column;
+}
+main .information button {
+  position: absolute;
+  z-index: 0;
+  width: 194px;
+  height: 60px;
+  border: none;
+  color: #23212A;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  background: linear-gradient(to right, #FFB629, #FFDA56, #FFD7A6);
+}
+
+#canvas {
+  position: relative;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  max-width: 1198px;
+  height: 100%;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+}
 
 /*# sourceMappingURL=style.css.map */

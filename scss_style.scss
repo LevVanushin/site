@@ -12,7 +12,6 @@ $krub: "Krub", sans-serif;
     background-color: #091242;
     height: 160px;
     display: flex;
-
     .container-header{
 
         position: relative;
@@ -117,14 +116,7 @@ main{
         height: 78px;
         background-color: rgba(9, 18, 66, 25%);
 
-        .container{
-            position: relative;
-            width: 1198px;
-            height: 100%;
-            margin: auto;
-            justify-content: space-between;
-            
-            display: flex;
+        
 
             // Elements
 
@@ -161,15 +153,14 @@ main{
                     text-align: center;
                     border: none;
                     color: black;
-                    width: 216px;
-                    height: 100%;
+                    max-width: 216px;
+                    height: 78px;
                     font: {
                         family: $krub;
                         weight: 600;
                         size: 16px;
                     };
                 }
-            }
         }
     }
 
@@ -201,15 +192,14 @@ main{
         }
 
         button{
-            position: relative;
-            
+            position: absolute;
+            z-index: 0;
             width: 194px;
             height: 60px;
 
             border: none;
-
             color: #23212A;
-
+            
             font: {
                 family: $krub;
                 weight: 600;
@@ -221,5 +211,21 @@ main{
 
             background: linear-gradient(to right, #FFB629, #FFDA56, #FFD7A6);
         }
+        
     }
+}
+
+#canvas{
+    position: relative;
+    pointer-events: none;
+}
+
+.container{
+    position: relative;
+    max-width: 1198px;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+    
+    display: flex;
 }
