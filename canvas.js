@@ -1,51 +1,45 @@
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
 
-const getGradus = (num) => {
-    return (Math.PI/180) * num;
+
+
+
+
+// let createBtn = (id_button) => {
+//     let btn = document.getElementById(id_button);
+//     btn.moveTo(btn.style.x, btn.style.y);
+//     return btn.arc(btn.style.width, btn.style.height, 42, 0, getGradus(90), true);
+// }
+
+
+class ButtonFront {
+    constructor(btnId){
+        this.btn = document.getElementById(btnId);
+        this.radius = 42;
+        this.pos = this.btn.getBoundingClientRect();
+    }
+
+    getGradus(num){
+        return (Math.PI/180) * num;
+    }
+
+    draw(){
+        
+        this.canvas = document.getElementById("canvas");
+        this.ctx = canvas.getContext("2d");
+        this.ctx.fillStyle = "white";
+
+
+        this.ctx.moveTo(this.pos.left, this.pos.top);
+
+        this.ctx.beginPath();
+
+        
+        this.ctx.arc(this.btn.offsetWidth, this.btn.offsetHeight, this.radius, 0, this.getGradus(90), true);
+        this.ctx.fill();
+    }
 }
-let radius = 42;
-ctx.fillStyle = "white";
-ctx.arc(194, 60, radius, 0, getGradus(90), true);
-ctx.fill();
 
-let button = document.getElementById("btn");
+let btn = new ButtonFront("btn");
+btn.draw();
 
-button.addEventListener("mouseover", (e) => {
-    console.log(1)
-    if (e.type == "mouseover"){
-        let timerId = setInterval(() => {
-            console.log("Interval")
-            if (radius >= 80){
-                clearInterval(timerId)
-                return 0;
-            }
-            else{
-                clearPath()
-                ctx.arc(194, 60, ++radius, 0, getGradus(90), true);
-                ctx.fill()
-            }
-            
-        }, 5)   
-    console.log("+")
-    }
-    else console.log(1)
-    
-    
-})
-button.addEventListener("mouseout", (e) => {
-    if (e.type == "mouseout"){
-        let timerId = setInterval(() => {
-            console.log("OUT")
-            if (radius == 40){
-                clearInterval(timerId)
-                return 0;
-            }
-            else{
-                ctx.arc(194, 60, --radius, 0, getGradus(90), true);
-                ctx.fill()
-            }
-            
-        }, 5) 
-    }
-})
+let btn_second = new ButtonFront("btn2")
+btn_second.draw();

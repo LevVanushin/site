@@ -167,8 +167,12 @@ main .information button {
 }
 
 #canvas {
-  position: relative;
+  position: absolute;
   pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -178,6 +182,12 @@ main .information button {
   margin: auto;
   justify-content: space-between;
   display: flex;
+}
+
+#btn2 {
+  width: 500px;
+  height: 200px;
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
