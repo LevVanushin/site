@@ -15,6 +15,14 @@ class ButtonFront {
         this.btn = document.getElementById(btnId);
         this.radius = 42;
         this.pos = this.btn.getBoundingClientRect();
+        this.canvasElement = document.createElement("canvas");
+        this.canvasElement.setAttribute("id", "canvas");
+        this.btn.appendChild(this.canvasElement);
+
+        this.canvasElement.setAttribute("width", this.btn.offsetWidth);
+        this.canvasElement.setAttribute("height", String(this.btn.offsetHeight));
+
+        this.ctx = this.canvasElement.getContext("2d");
     }
 
     getGradus(num){
@@ -23,8 +31,6 @@ class ButtonFront {
 
     draw(){
         
-        this.canvas = document.getElementById("canvas");
-        this.ctx = canvas.getContext("2d");
         this.ctx.fillStyle = "white";
 
 
@@ -35,11 +41,37 @@ class ButtonFront {
         
         this.ctx.arc(this.btn.offsetWidth, this.btn.offsetHeight, this.radius, 0, this.getGradus(90), true);
         this.ctx.fill();
+        
     }
+
+    hover(){
+        this.mouseover = (e) => {
+            if (e.type == 'mouseover'){
+                let id = setInterval(() => {
+                    if (this.radius <= 80){
+                        console.log(1)
+                        this.ctx.clearRect(0, 0, this.btn.offsetWidth, this.btn.offsetHeight)
+                        this.ctx.arc(this.btn.offsetWidth, this.btn.offsetHeight, this.radius++, 0, this.getGradus(90), true);
+                        this.ctx.fill();
+                    }
+                    else if(this.radius>80){
+                        clearInterval(id);
+
+                    }
+                    
+                }, 10);
+            }
+            
+        }
+
+        this.btn.addEventListener('mouseover', this.mouseover);
+        
+        this.btn.addEventListener('mouseout', this.mouseout)
+        
+    }
+    
 }
 
 let btn = new ButtonFront("btn");
 btn.draw();
-
-let btn_second = new ButtonFront("btn2")
-btn_second.draw();
+btn.hover();
